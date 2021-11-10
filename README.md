@@ -18,7 +18,7 @@ This was a course Project in the course Artificial Intelligence and is done unde
 
 Team Members: 
 Kushank Maheshwari (2018B4A70679P)
-Arsh Tyagi
+Arsh Tyagi (2018B4A70719P)
 Rohit Rathi
 ```
 
