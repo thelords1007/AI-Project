@@ -2,6 +2,7 @@ import wikipedia
 from googlesearch import search
 from tkinter import * 
 root = Tk() 
+
 root.geometry('400x200')
 entry1 = Entry(root, width = 30)
 entry1.pack()
