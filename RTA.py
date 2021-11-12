@@ -1,0 +1,32 @@
+import wikipedia
+from googlesearch import search
+from tkinter import * 
+
+root = Tk() 
+root.title("Google Meet")
+root.geometry('300x300')
+entry1 = Entry(root, width = 30)
+entry1.place(x=80, y=90)
+entry1.pack(pady = 10)
+
+def search_on_web():
+    val = entry1.get()
+    val+'o'
+
+    try:
+        info = wikipedia.summary(val, sentences = 5)
+        print(info)
+        print("\n")
+        print("For Further Reference follow the below links: \n")
+        for j in search(val, tld="co.in", num=10, stop=10, pause=2):
+	        print(j)
+
+    except: 
+        for j in search(val, tld="co.in", num=10, stop=10, pause=2):
+	        print(j)
+
+def main():
+    btn = Button(root, text = 'Search', bd = '5', command = search_on_web).pack(pady = 10)   
+    root.mainloop()
+
+main()
