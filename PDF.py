@@ -18,7 +18,6 @@ EVERY_SECONDS = 10
 IN_LAST_SECONDS = 10  # How many seconds to compare with
 NUM_LAST_SECONDS = 1  # how many we've save in the last ^ seconds to avoid saving the frame
 # I.E if IN = 5, NUM = 0: If we haven't saved any frames in the last 5 seconds, save this one
-
 try:
     rmtree("frames")
 except:
