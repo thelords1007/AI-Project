@@ -1,5 +1,3 @@
-#!pip install img2pdf
-# %%writefile extractFrame.py
 from img2pdf import convert as pdf
 import cv2
 from os import listdir, remove, mkdir
@@ -8,8 +6,10 @@ from numpy import mean
 from numpy import sum as s
 import sys
 
+# python3 PDF.py "F:\Silicon Valley\Season 1\Silicon Valley - S01E01 - Minimum Viable Product.mp4"
+# 2 command line arguments are: python3 "F:\Silicon Valley\Season 1\Silicon Valley - S01E01 - Minimum Viable Product.mp4"
 if len(sys.argv) != 2 or "-h" in sys.argv[1]:
-    sys.exit("Usage: " + sys.argv[0] + " example.mp4")
+    sys.exit("Incorrect Path")
 else:
     vidcap = cv2.VideoCapture(sys.argv[1])
 
@@ -33,7 +33,7 @@ count = 0
 triggers = []
 success = True
 fps = int(vidcap.get(cv2.CAP_PROP_FPS))
-print(fps)
+# print(fps)
 width = int(vidcap.get(cv2.CAP_PROP_FRAME_WIDTH))
 height = int(vidcap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 length = int(vidcap.get(cv2.CAP_PROP_FRAME_COUNT))
@@ -56,4 +56,5 @@ while success:  # While we've still got frames
 with open("slides.pdf", "wb") as f:  # or directly save to google drive "path-to-drive"
     f.write(pdf(["frames/" + s for s in sorted(listdir("frames/"))]))
 
-# !python extractFrame.py "Video Path"
+
+

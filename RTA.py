@@ -13,7 +13,7 @@ entry1.pack(pady=10)
 def search_on_web():
     val = entry1.get()
     val + 'o'
-
+    print(val)
     try:
         info = wikipedia.summary(val, sentences=5)
         print(info)
