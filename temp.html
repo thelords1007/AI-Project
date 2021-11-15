@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Picture-In-Picture</title>
+</head>
+<body>
+  <input id="text1" placeholder="Enter Youtube Link">
+  <br> 
+  <button onclick="fn1()" id="btn1">Submit</button>
+  <br> 
+  <h3> Or Give a File Path </h3>
+  <br>
+  <input id="text2" placeholder="Enter File Path">
+  <br> 
+  <button onclick="fn2()" id="btn2">Submit</button>
+
+  <script type="text/javascript">
+
+    function fn1(){
+      var str = document.getElementById("text1").value;
+      localStorage.setItem("storageName", str);
+      window.location.href = "index.html";
+    }
+
+    function fn2(){
+      var str = document.getElementById("text2").value;
+      str = str+"#";
+      localStorage.setItem("storageName", str);
+      alert(str);
+      window.location.href = "index.html";
+    }
+
+    // const realFileBtn = document.getElementById('real-file');
+    // const customBtn = document.getElementById("custom-button");
+    // const customTxt = document.getElementById("custom-text");
+
+    // customBtn.addEventListener("click", function() {
+    //   realFileBtn.click();
+    // });
+
+    // realFileBtn.addEventListener("change", function() {
+    //   if (realFileBtn.value) {
+    //     customTxt.innerHTML = realFileBtn.value;
+    //     localStorage.setItem("storageName", realFileBtn.value);
+    //   } else {
+    //     customTxt.innerHTML = "No file chosen, yet.";
+    //   }
+    //   window.location.href = "index.html";
+    // });
+  </script>
+
+
+  <!-- <button onclick="document.getElementById('file-input').click();">Open</button>
+  <input id="file-input" type="file" name="name" style="display: none;" />
+  <script type="text/javascript">
+   const onChange = (event) => {
+    const value = event.target.value;
+
+    // this will return C:\fakepath\somefile.ext
+    console.log(value);
+
+    const files = event.target.files;
+
+    //this will return an ARRAY of File object
+    console.log(files);
+    }
+
+    return (
+    <input type="file" onChange={onChange} />
+    )
+  </script> -->
+</body>
+</html>
