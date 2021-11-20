@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  font-family: system-ui;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+video {
+  margin-bottom: 1.5rem;
+}
+
+button {
+  padding: 10px 15px;
+  border-radius: 5px;
+  background: #282B39;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  outline: 0;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.buttons-wrap {
+  display: flex;
+  justify-content: center;
+}
