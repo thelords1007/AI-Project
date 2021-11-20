@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Picture-in-Picture</title>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- <video>
+        <source src="https://drive.google.com/uc?export=download&id=1bivgGO2NuLl6lNax4kJgeTd-TWtDYUbT/view?usp=sharing" type='video/mp4' controls>
+    </video> -->
+      <!-- <video width="400" src="video.mp4" controls>
+
+     </video> -->
+      <video id="video" width="720" controls></video>
+      <script>
+        var m=document.getElementById('video');
+        var str = localStorage.getItem("storageName");
+        if(str.charAt(str.length-1)=='#')
+        {	
+          var subst = str.substring(0, str.length - 1);
+          var temp = "";
+          var final;
+          for(var i=0;i<subst.length;i++)
+          {
+            if(subst[i]=="\\")
+            {
+              final = i;
+              temp = temp + "../";
+            }
+          }
+          for(var j=final+1;j<subst.length;j++)
+            temp = temp + subst[j];
+          alert(temp);
+          m.setAttribute("src",temp);
+        }
+        else
+        {
+          m.setAttribute("data-yt2html5",str);
+          document.getElementById('video').play();
+        }
+      </script>
+      <script src="https://cdn.jsdelivr.net/gh/thelevicole/youtube-to-html5-loader@4.0.1/dist/YouTubeToHtml5.js"></script>
+      <script>
+        new YouTubeToHtml5({
+          withAudio: true
+        });
+      </script>
+      <div class="buttons-wrap">
+        <button id="button">Activate PIP</button>
+      </div>
+    </div>
+    <script src="pip.js"></script>
+  </body>
+</html>
