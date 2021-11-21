@@ -1,3 +1,4 @@
+# Part3: Creating a pdf file from video input file
 from img2pdf import convert as pdf
 import cv2
 from os import listdir, remove, mkdir
