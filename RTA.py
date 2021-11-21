@@ -10,7 +10,7 @@ entry1 = Entry(root, width=30)
 entry1.place(x=80, y=90)
 entry1.pack(pady=10)
 
-
+#This function would be called when the button in GUI is pressed
 def search_on_web():
     val = entry1.get()#taking string input
     val + 'o'
@@ -28,6 +28,7 @@ def search_on_web():
             print(j)
 
 
+#The execution of the code startys from here
 def main():
     btn = Button(root, text='Search', bd='5', command=search_on_web).pack(pady=10)#calling search_on_web function
     root.mainloop()
