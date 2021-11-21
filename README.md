@@ -2,7 +2,7 @@
 
 # Picture-in-Picture Mode
 
-> This feature would help students segregate the instructor’s presentation and code side-by-side with the instructor on their IDE, giving them a great learning experience. The code for implementing this feature is available in PIP.py file.
+> This feature would help students segregate the instructor’s presentation and code side-by-side with the instructor on their IDE, giving them a great learning experience. The code for implementing this feature is available in PIP folder.
 
 # Real-Time Answering of Questions Asked by Students
 
