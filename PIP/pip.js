@@ -1,6 +1,8 @@
+// Getting the video and button attribute using the getElementById
 const video = document.getElementById("video"),
       button = document.getElementById("button");
 
+// Calling this async function when a click is done on activate PIP.
 button.addEventListener("click", async () => {
   button.disabled = true;
 
@@ -19,10 +21,12 @@ button.addEventListener("click", async () => {
   }
 });
 
+// function(event) is called when we enter picture in picture mode which handles the facility of running the video
 video.addEventListener("enterpictureinpicture", function(event) { 
   console.log(event);
  });
 
+// function(event) is called when we leave picture in picture mode which handles the facility of running the video
  video.addEventListener("leavepictureinpicture", function(event) {
    console.log(event);
  });
