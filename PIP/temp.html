@@ -16,7 +16,7 @@
   <title>Picture-In-Picture</title>
 </head>
 <body>
-
+  <!-- Code for displaying Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <ul class="navbar-nav mx-auto">
     <a class="navbar-brand " href="#" style="display: inline-block; text-align: center; ">Picture In Picture Mode</a>
@@ -28,7 +28,7 @@
 
   <div class="container">
     <div class="row" style="padding: 40px;">
-      
+      <!-- code for displaying content on the left hand side -->
       <div class="col-md-6">
           <p> This is a course Project made in the course <strong> Artificial Intelligence (CS F407) </strong> at <strong>BITS Pilani</strong>. The broad idea for making this project comes under the domain of Intelligent Tutoring System wherein making it easy for the student to code side-by-side the instructor while watching any youtube coding video.</p>
           <br>
@@ -36,6 +36,7 @@
 
       </div>
 
+      <!-- code for taking input of the youtube link from the user -->
       <div class="col-md-6">
         <p> Enter any Youtube file link which you want to open in Picture-in-Picture mode </p>
         <input id="text1" placeholder="Enter Youtube Link" style="display: flex; width: 100%;">
@@ -47,7 +48,7 @@
   </div>
 
   <script type="text/javascript">
-
+    // Calling the function when the submit button is clicked
     function fn1(){
       var str = document.getElementById("text1").value;
       localStorage.setItem("storageName", str);
