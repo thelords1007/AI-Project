@@ -7,7 +7,7 @@ from numpy import sum as s
 import sys
 
 # python3 PDF.py "F:\Silicon Valley\Season 1\Silicon Valley - S01E01 - Minimum Viable Product.mp4"
-# 2 command line arguments are: python3 "F:\Silicon Valley\Season 1\Silicon Valley - S01E01 - Minimum Viable Product.mp4"
+# 2 command line arguments are: PDF.py "F:\Silicon Valley\Season 1\Silicon Valley - S01E01 - Minimum Viable Product.mp4"
 if len(sys.argv) != 2 or "-h" in sys.argv[1]:
     sys.exit("Incorrect Path")
 else:
