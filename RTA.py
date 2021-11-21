@@ -12,7 +12,7 @@ entry1.pack(pady=10)
 
 
 def search_on_web():
-    val = entry1.get()
+    val = entry1.get()#taking string input
     val + 'o'
     print(val)
     try:
@@ -29,7 +29,7 @@ def search_on_web():
 
 
 def main():
-    btn = Button(root, text='Search', bd='5', command=search_on_web).pack(pady=10)
+    btn = Button(root, text='Search', bd='5', command=search_on_web).pack(pady=10)#calling search_on_web function
     root.mainloop()
 
 
