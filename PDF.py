@@ -45,7 +45,7 @@ while success:  # While we've still got frames
     if count % (EVERY_SECONDS * fps) == 0:  # Only check for a new slide every X seconds
         print('Processing: [%d%%]\r' % round(count / length * 100), end="")  # Print progress
         # If the pixel difference between this and the last frame surpasses our threshold and recency rules
-        if abs(s(image - lastIm)) > threshold and sum(triggers[-IN_LAST_SECONDS:]) < NUM_LAST_SECONDS:
+        if abs(sum(image - lastIm)) > threshold and sum(triggers[-IN_LAST_SECONDS:]) < NUM_LAST_SECONDS:
             cv2.imwrite('frames/frame%07d.jpg' % count, image)  # Save the frame
             triggers.append(1)  # And record that we saved it (for recency validation)
         else:
