@@ -14,6 +14,7 @@
       <video id="video" width="720" controls></video>
       <script>
         var m=document.getElementById('video');
+        // Getting the Youtube link from the temp.html page by storing it in the local Storage
         var str = localStorage.getItem("storageName");
         if(str.charAt(str.length-1)=='#')
         {	
@@ -31,20 +32,24 @@
           for(var j=final+1;j<subst.length;j++)
             temp = temp + subst[j];
           alert(temp);
+          // Adding the new attribute to the video tag 
           m.setAttribute("src",temp);
         }
         else
         {
+          //Adding the new attribute to start the youtube video
           m.setAttribute("data-yt2html5",str);
           document.getElementById('video').play();
         }
       </script>
+      <!-- Calling the Javascript File loading the video   -->
       <script src="https://cdn.jsdelivr.net/gh/thelevicole/youtube-to-html5-loader@4.0.1/dist/YouTubeToHtml5.js"></script>
       <script>
         new YouTubeToHtml5({
           withAudio: true
         });
       </script>
+      <!-- Button to activate the PIP functionality -->
       <div class="buttons-wrap">
         <button id="button">Activate PIP</button>
       </div>
