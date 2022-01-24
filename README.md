@@ -12,6 +12,7 @@
 
 >There are several times when a professor writes on the slides and the students cannot note them down. So, our extension would form the pdf file of the complete lecture slides along with the notes written on them by the professor, which the students could use as a reference at a later point in time. The code for implementing this feature is available in PDF.py file.
 
+
 ---
 ```
 This was a course Project in the course Artificial Intelligence and is done under the supervision of Prof. Vishal Gupta (Associate Professor BITS Pilani).
