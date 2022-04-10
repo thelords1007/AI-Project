@@ -1,6 +1,7 @@
 /* Handling the display attributes of the video when displayed in the browser  */
 
-body {
+body 
+{
   margin: 0;
   font-family: system-ui;
   display: flex;
@@ -10,11 +11,13 @@ body {
   text-align: center;
 }
 
-video {
+video 
+{
   margin-bottom: 1.5rem;
 }
 
-button {
+button 
+{
   padding: 10px 15px;
   border-radius: 5px;
   background: #282B39;
@@ -27,7 +30,8 @@ button {
   margin: 0 10px;
 }
 
-.buttons-wrap {
+.buttons-wrap 
+{
   display: flex;
   justify-content: center;
 }
