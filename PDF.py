@@ -23,6 +23,7 @@ try:
     rmtree("frames")
 except:
     pass  # Cleanup
+
 try:
     remove("slides.pdf")
 except:
